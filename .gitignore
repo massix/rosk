@@ -1,0 +1,5 @@
+build/
+*.un*
+*.swp
+*.clang_complete
+
