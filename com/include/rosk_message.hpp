@@ -66,13 +66,9 @@ namespace rosk {
 					if (_proto_message == 0) throw std::runtime_error("Message not initialized");
 
 					// Lazy accessor
-					if (_internal_message == 0) {
+					if (_internal_message == 0)
 						_internal_message = new MessageType();
-						_internal_message->ParseFromString(_proto_message->serialized_message());
-					}
 				}
-
-
 		};
 	}
 }

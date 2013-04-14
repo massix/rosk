@@ -13,8 +13,8 @@ int main()
 	rmsg.commit();
 
 	rosk::com::login_message const & mymsg(rmsg.get_internal_message<rosk::com::login_message>());
-	if (mymsg.client_id() != "c_id") return -1;
-	if (mymsg.wished_robo_type() != "TANK") return -1;
+	if (mymsg.client_id() != "c_id") return 1;
+	if (mymsg.wished_robo_type() != "TANK") return 1;
 
 	return 0;
 }
