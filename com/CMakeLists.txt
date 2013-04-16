@@ -42,6 +42,9 @@ install(FILES ${PROTO_HDRS} DESTINATION include)
 # Test suite
 enable_testing()
 add_executable(test_basics "test/test_basics.cpp")
+add_executable(test_zmq_socket "test/test_zmq_socket.cpp")
 target_link_libraries(test_basics rosk_com)
+target_link_libraries(test_zmq_socket rosk_com)
 
 add_test(test_basics ${CMAKE_CURRENT_BINARY_DIR}/test_basics)
+add_test(test_zmq_socket ${CMAKE_CURRENT_BINARY_DIR}/test_zmq_socket)
